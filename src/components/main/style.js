@@ -6,10 +6,9 @@ const MainStyled = styled.div`
     font-family: monospace;
 
     .boxMain {
-        height: 100vh;
         min-height: 700px;
         width: 100vw;
-        background-color: orangered;
+        background-color: #ffccff;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -17,16 +16,18 @@ const MainStyled = styled.div`
 
     .content {
         border-radius: 7px;
-        border: 1px solid #000066;
-        height: 90vh;
+        margin-top: 4vh;
+        border: 1px solid black;
         width: 80vw;
-        background-color: #333399;
+        background-color: #ff9234;
         display: grid;
         grid-template-areas:
             "image data"
             "repos repos";
         max-width: 800px;
         min-height: 600px;
+        margin-bottom: 3vh;
+        padding-bottom: 2vh;
     }
 
     .userImage{
@@ -53,23 +54,24 @@ const MainStyled = styled.div`
         align-items: baseline;
 
     }
+
+    .userData h4 {
+        padding-left: 1.3em;
+    }
+
     .userRepos{
         min-height: 300px;
         max-width: 800px;
         width: 80vw;
-        height: 45vh;
+        height: auto;
         grid-area: repos;
     }
 
     img {
-        max-width: 125px;
-        max-height: 210px;
-        min-width: 25px;
-        min-height: 110px;
-        width: 20vw;
-        height: 18vh;
-        border: 1px solid #ddd;
-        border-radius: 4px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid black;
+        border-radius: 7px;
     }
 
     ul {
@@ -85,19 +87,54 @@ const MainStyled = styled.div`
     li {
         margin-left: 35px;
         margin-right: 35px;
-        padding: 10;
-        background-color: orangered;
+        padding: 1em;
+        background-color: #ffccff;
         border: 1px solid black;
         border-radius: 7px;
         height: 2em;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
         display: flex;
-        justify-content: space-around;
         align-items: center;
     }
 
     a {
         text-decoration: none;
         color: black;
+        margin-left: 100px;
+    }
+
+    span {
+        margin-left: auto;
+        padding-right: 100px;
+    }
+
+
+    @media only screen and (max-width: 780px){
+        .userRepos ul li span {
+            display: none;
+        }
+
+        .userData {
+            display: none;
+        }
+
+        .content {
+            grid-template-areas:
+                "image image"
+                "repos repos";
+        }
+
+        .userImage {
+            margin: auto;
+        }
+
+        li {
+            justify-content: space-around;
+        }
+        li a {
+            margin: 0;
+        }
     }
 `
 

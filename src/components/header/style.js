@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const StyledHeader = styled.div`
-    background-color: #333399;
-    color: #ffccff;
+    background-color: #ff9234;
+    color: black;
     font-family: monospace;
     height: 6em;
     display: flex;
@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 
     .stick {
         padding: 5px;
-        background-color: #000066;
+        background-color: #ff5533;
         width: 100%;
     }
 
@@ -37,12 +37,12 @@ const StyledHeader = styled.div`
     input {
         margin-left: 7vw;
         border-radius: 5px;
-        border: 1px;
+        border: 1px solid;
         font-size: 1em;
-        background-color: #99ccff;
+        background-color: #ffccff;
     }
 
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 780px) {
         h1 {
             display: none;
         }
